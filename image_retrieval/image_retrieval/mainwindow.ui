@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1104</width>
+    <height>855</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_choose">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择一张图片</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_choose">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>341</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_color">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>基于颜色特征</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_edge">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>140</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>基于Canny边缘检测</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_multi">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>290</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>多特征融合</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>340</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始检索</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>410</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>410</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>410</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_4">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>410</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>610</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_6">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>610</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_7">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>610</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_show_8">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>610</y>
+      <width>251</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_upload">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>270</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>批量上传</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Histogram">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>颜色直方图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Edge">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>340</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>边缘检测图</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>10</y>
+      <width>481</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_min">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>60</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_min">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>50</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>最低阈值</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_max">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>100</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>10</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>最高阈值</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_max">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_color">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>190</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_edge">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>250</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_min_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>190</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>颜色百分比</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_min_3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>190</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_min_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>250</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>边缘百分比</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_min_5">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>250</y>
+      <width>61</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1104</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>图像检索系统</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
